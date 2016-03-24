@@ -12,7 +12,7 @@ var PlantSchema = new Schema({
     zoneHardiness : Number,
     exposure: String,
     use : String,
-    charateristcs : String,
+    characteristics : String,
     insects : String,
     diseases : String,
     classification : String,
