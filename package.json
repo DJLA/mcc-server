@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app",
-    "setup": "npm install | npm install nodemon -g"
+    "setup-server": "npm install | npm install nodemon -g"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
