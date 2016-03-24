@@ -75,7 +75,7 @@ var config = {
                     format: 'plain',
                     random: Math.random
                 }),
-                charateristcs: loremIpsum({
+                characteristics: loremIpsum({
                     count: random(3,1),
                     units: 'sentences',
                     sentenceLowerBound: 5,
