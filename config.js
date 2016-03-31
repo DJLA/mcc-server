@@ -6,6 +6,7 @@ function random(max,min) {
 }
 
 var config = {
+    secret:"mccauthsecretoken",
     port: process.env.PORT || '3000',
     createSampleData: function() {
         

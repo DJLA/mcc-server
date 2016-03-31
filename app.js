@@ -49,6 +49,7 @@ db.once('open', function() {
 
 //Creating sample data for routes to use
 config.createSampleData();
+app.set('secret', config.secret); // secret variable
 
 //Routes
 app.use('/plants', plantsRoutes);

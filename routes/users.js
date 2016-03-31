@@ -1,0 +1,42 @@
+var express = require("express");
+var router = express.Router();
+var ActiveDirectory = require('activedirectory');
+var config = require("../config.js");
+var jwt = require("jsonwebtoken");
+
+router.route.post("/signin", function(req,res,next) {
+
+    var config = {
+        url: 'ldap://mccnet.mccneb.edu',
+        baseDN: 'dc=mccnet,dc=mccneb,dc=edu',
+        username: 'HORTTEST@mccnet.mccneb.edu',
+        password: 'H0rtG3t1n!'
+    }
+
+    var ad = new ActiveDirectory(config);
+
+    ad.authenticate(config.username, config.password, function(err, auth) {
+        if (err) {
+            console.log('ERROR: ' + JSON.stringify(err));
+            return;
+        }
+
+        if (auth) {
+                        // if user is found and password is right
+            // create a token
+            var token = jwt.sign(config, config.secret, {
+                expiresInMinutes: 1440 // expires in 24 hours
+            });
+
+            // return the information including token as JSON
+            res.json({
+                success: true,
+                message: 'Enjoy your token!',
+                token: token
+            });
+        }
+        else {
+            console.log('Authentication failed!');
+        }
+    });
+})
