@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var ActiveDirectory = require('activedirectory');
-var config = require("../config.js");
+var appConfig = require("../config.js");
 var jwt = require("jsonwebtoken");
 
 router.post("/signin", function(req,res,next) {
@@ -24,7 +24,7 @@ router.post("/signin", function(req,res,next) {
         if (auth) {
             // if user is found and password is right
             // create a token
-            var token = jwt.sign(config, config.secret, {
+            var token = jwt.sign(config, appConfig.secret, {
                 expiresInMinutes: 1440 // expires in 24 hours
             });
 
