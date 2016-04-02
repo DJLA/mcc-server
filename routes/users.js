@@ -9,8 +9,8 @@ router.post("/signin", function(req,res,next) {
     var config = {
         url: 'ldap://mccnet.mccneb.edu',
         baseDN: 'dc=mccnet,dc=mccneb,dc=edu',
-        username: req.username,
-        password: req.password
+        username: req.body.username,
+        password: req.body.password
     }
 
     var ad = new ActiveDirectory(config);
