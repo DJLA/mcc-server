@@ -10,7 +10,7 @@ var config = require("./config.js")
 
 //Importing routes module
 var plantsRoutes = require('./routes/plants');
-
+var userRoutes = require("./routes/users.js");
 var app = express();
 
 
@@ -18,6 +18,7 @@ var app = express();
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   next();
 });
 
@@ -53,6 +54,7 @@ app.set('secret', config.secret); // secret variable
 
 //Routes
 app.use('/plants', plantsRoutes);
+app.use("/users",userRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

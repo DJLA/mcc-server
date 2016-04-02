@@ -9,6 +9,13 @@ var config = {
     secret:"mccauthsecretoken",
     port: process.env.PORT || '3000',
     createSampleData: function() {
+        var pos = [
+            {latitude:41.307618,longitude: -95.957025},
+            {latitude:41.307441,longitude: -95.957019},
+            {latitude:41.307455,longitude: -95.956837},
+            {latitude:41.307687,longitude: -95.957065},
+            {latitude:41.307652,longitude: -95.957263},
+        ]
         
         //Removing all plants from db
         plantModel.find(function(err,docs){
@@ -19,8 +26,10 @@ var config = {
         });        
         
         //creating new set of sample plants
-        for (var i = 0; i < 15; i++) {
+        for (var i = 0; i < 5; i++) {
             var plant = new plantModel(createRecord());
+            plant.latitude = pos[i].latitude;
+            plant.longitude = pos[i].longitude;
             plant.save();
         }
 

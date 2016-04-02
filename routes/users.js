@@ -4,7 +4,7 @@ var ActiveDirectory = require('activedirectory');
 var config = require("../config.js");
 var jwt = require("jsonwebtoken");
 
-router.route.post("/signin", function(req,res,next) {
+router.post("/signin", function(req,res,next) {
 
     var config = {
         url: 'ldap://mccnet.mccneb.edu',
@@ -22,7 +22,7 @@ router.route.post("/signin", function(req,res,next) {
         }
 
         if (auth) {
-                        // if user is found and password is right
+            // if user is found and password is right
             // create a token
             var token = jwt.sign(config, config.secret, {
                 expiresInMinutes: 1440 // expires in 24 hours
@@ -40,3 +40,5 @@ router.route.post("/signin", function(req,res,next) {
         }
     });
 })
+
+module.exports = router;

@@ -20,7 +20,9 @@ var PlantSchema = new Schema({
     height : Number,
     spread : Number,
     flowers : String,
-    fruit : String
+    fruit : String,
+    latitude:Number,
+    longitude:Number
 })
 
 module.exports = mongoose.model("Plant",PlantSchema);
