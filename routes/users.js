@@ -13,6 +13,8 @@ router.post("/signin", function(req,res,next) {
         password: req.body.password
     }
 
+    console.log(req.body)
+
     var ad = new ActiveDirectory(config);
 
     ad.authenticate(config.username, config.password, function(err, auth) {
