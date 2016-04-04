@@ -5,7 +5,7 @@ var auth = require("../middleware/auth.js");
 
 /* GET home page. */
 router.route("/")
-  .get(plantController.getPlants)
+  .get(authplantController.getPlants)
   .post(auth,plantController.addPlant)
 
 
