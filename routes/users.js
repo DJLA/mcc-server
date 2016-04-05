@@ -15,7 +15,10 @@ router.post("/signin", function(req,res,next) {
 
     var ad = new ActiveDirectory(config);
     
-    
+    var jwtData = {
+        username:config.username
+    }
+
         
     ad.authenticate(config.username, config.password, function(err, auth) {
         if (err) {
@@ -26,7 +29,7 @@ router.post("/signin", function(req,res,next) {
         if (auth) {
             // if user is found and password is right
             // create a token
-            var token = jwt.sign(config, appConfig.secret, {
+            var token = jwt.sign(jwtData, appConfig.secret, {
                 expiresInMinutes: 1440 // expires in 24 hours
             });
 
