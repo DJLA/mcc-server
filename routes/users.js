@@ -14,7 +14,9 @@ router.post("/signin", function(req,res,next) {
     }
 
     var ad = new ActiveDirectory(config);
-
+    
+    
+        
     ad.authenticate(config.username, config.password, function(err, auth) {
         if (err) {
             console.log('ERROR: ' + JSON.stringify(err));
