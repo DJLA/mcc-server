@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app",
+    "test":"mocha",
     "setup-server": "npm install | npm install nodemon -g"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "jade": "~1.11.0",
     "jsonwebtoken": "^5.7.0",
     "lorem-ipsum": "^1.0.3",
+    "mocha": "^2.4.5",
     "mongoose": "^4.4.9",
     "morgan": "~1.6.1",
     "nodemon": "^1.9.1",

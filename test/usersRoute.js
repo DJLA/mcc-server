@@ -13,9 +13,9 @@ var app = require("../bin/www");
 
 
 describe("Users Route",function(){
-    var url = "https://plant-api-abdi0.c9user.io";
+    var url = "https://plant-api-abdi07.c9users.io";
 
-    it("should loggin to Active Directory",function(){
+    it("should loggin to Active Directory",function(done){
         var data = {
             username: 'HORTTEST@mccnet.mccneb.edu',
             password: 'H0rtG3t1n!'
@@ -27,7 +27,8 @@ describe("Users Route",function(){
             .end(function(err){
                 if(err)
                     throw err
-                    
+                
+                done()
             })
     })
     
