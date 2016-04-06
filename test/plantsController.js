@@ -34,7 +34,7 @@ describe("Plants Controller",function(){
         var res = {
             json:function(obj){
                 obj.plants.should.be.an.Array();
-                obj.should.have.property("data");
+                obj.should.have.property("plants");
                 done()
             }
         }
