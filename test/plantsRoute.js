@@ -76,7 +76,7 @@ describe("Plants Route",function(){
                 done()
             })
     })
-    it("should a plant",function(done){
+    it("should add a plant",function(done){
         request(url)
             .post("/plants?token="+token)
             .send()
