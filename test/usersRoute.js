@@ -25,6 +25,9 @@ describe("Users Route",function(){
             .post("/users/signin")
             .send(data)
             .end(function(err,res){
+                if(err)
+                    throw err
+                    
                 res.status.should.equal(200)
                 done()
             })

@@ -18,6 +18,8 @@ router.post("/signin", function(req,res,next) {
     var jwtData = {
         username:config.username
     }
+    
+    console.log(req.body)
 
         
     ad.authenticate(config.username, config.password, function(err, auth) {
