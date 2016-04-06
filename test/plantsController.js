@@ -28,9 +28,6 @@ describe("Plants Controller",function(){
         done()
     })
     
-    it("",function(done) {
-        done();
-    })
     
     it("should get plants from db",function(done){
         var req = {
