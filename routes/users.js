@@ -29,6 +29,7 @@ router.post("/signin", function(req,res,next) {
         }
 
         if (auth) {
+            console.log(auth)
             // if user is found and password is right
             // create a token
             var token = jwt.sign(jwtData, appConfig.secret, {
