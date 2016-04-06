@@ -1,4 +1,3 @@
-/*
 var should = require("should");
 var request = require('supertest');
 var mongoose = require('mongoose');
@@ -90,4 +89,3 @@ describe("Plants Route",function(){
             })
     })
 })
-*/
