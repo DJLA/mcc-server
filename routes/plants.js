@@ -6,12 +6,12 @@ var auth = require("../middleware/auth.js");
 /* GET home page. */
 router.route("/")
   .get(plantController.getPlants)
-  .post(plantController.addPlant)
+  .post(auth,plantController.addPlant)
 
 
 router.route("/:plantId")
   .get(plantController.getOnePlant)
-  .delete(plantController.deletePlant)
-  .put(plantController.updatePlant)
+  .delete(auth,plantController.deletePlant)
+  .put(auth,plantController.updatePlant)
 
 module.exports = router;
