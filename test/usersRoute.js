@@ -18,7 +18,7 @@ describe("Users Route",function(){
     it("should loggin to Active Directory",function(done){
         var data = {
             username: 'HORTTEST@mccnet.mccneb.edu',
-            password: 'H0rtG3t1n!'
+            password: 'H0rtG3t1n'
         }
         
         request(url)
