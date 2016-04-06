@@ -8,12 +8,16 @@ var id = "";
 var url = "http://10.11.91.37:3000";
 var token = ""
 
-mockgoose(mongoose);
-GLOBAL.status = "testing"
-
-var app = require("../bin/www")
 
 describe("Plants Controller",function(){
+    
+    before(function(done) {
+        mockgoose(mongoose);
+        GLOBAL.status = "testing"
+        
+        var app = require("../bin/www")        
+    })
+    
     before(function(done){
         
         var data = {
