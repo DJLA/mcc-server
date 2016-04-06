@@ -101,7 +101,7 @@ describe("Plants Route",function(){
     })
     it("should delete a single plant",function(done){
         request(url)
-            .delete("/plants/"+id+"?token=")
+            .delete("/plants/"+id+"?token="+token)
             .send()
             .end(function(err,res){
                 if(err)
