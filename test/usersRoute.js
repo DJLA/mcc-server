@@ -28,7 +28,7 @@ describe("Users Route",function(){
                 if(err)
                     throw err
                 
-                console.log(res)
+                console.log(res.body.token)
                 
                 res.status.should.equal(200)
                 done()
