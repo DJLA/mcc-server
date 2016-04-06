@@ -13,7 +13,7 @@ var app = require("../bin/www");
 
 
 describe("Users Route",function(){
-    var url = "http:/10.11.91.37:3000";
+    var url = "http://10.11.91.37:3000";
 
     it("should loggin to Active Directory",function(done){
         var data = {
