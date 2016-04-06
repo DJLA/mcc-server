@@ -12,7 +12,7 @@ GLOBAL.status = "testing"
 var app = require("../bin/www")
 
 describe("Plants Route",function(){
-    var url = 'https://plant-api-abdi07.c9users.io';
+    var url = "http://10.11.91.37:3000";
     
     before(function(done){
         
