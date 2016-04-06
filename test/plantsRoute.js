@@ -30,7 +30,7 @@ describe("Plants Route",function(){
         done()
     })
     
-    /*
+    
     before(function(done){
         var data = {
             username: 'HORTTEST@mccnet.mccneb.edu',
@@ -45,11 +45,11 @@ describe("Plants Route",function(){
                     throw err
                 
                 res.status.should.equal(200);
-                token = res.
+                token = res.body.token;
                 done();
             })
     })
-    */
+    
     
     it("should return all of the plants",function(done){
         request(url)
@@ -78,7 +78,7 @@ describe("Plants Route",function(){
     })
     it("should a plant",function(done){
         request(url)
-            .post("/plants")
+            .post("/plants?token="+token)
             .send()
             .end(function(err,res){
                 if(err)
@@ -90,7 +90,7 @@ describe("Plants Route",function(){
     })
     it("should update a single plant",function(done){
         request(url)
-            .put("/plants/"+id)
+            .put("/plants/"+id+"?token="+token)
             .send()
             .end(function(err,res){
                 if(err)
@@ -101,7 +101,7 @@ describe("Plants Route",function(){
     })
     it("should delete a single plant",function(done){
         request(url)
-            .delete("/plants/"+id)
+            .delete("/plants/"+id+"?token="+token)
             .send()
             .end(function(err,res){
                 if(err)
