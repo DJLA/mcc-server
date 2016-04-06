@@ -22,6 +22,7 @@ router.post("/signin", function(req,res,next) {
         
     ad.authenticate(config.username, config.password, function(err, auth) {
         if (err) {
+            console.log("AD error")
             res.status(400)
             res.send('ERROR: ' + JSON.stringify(err));
             return;
@@ -42,6 +43,7 @@ router.post("/signin", function(req,res,next) {
             });
         }
         else {
+            console.log("Auth Failed")
             res.status(400)
             res.send('Authentication failed!');
         }
