@@ -6,7 +6,10 @@ exports.addPlant = function(req, res, next) {
         if (err)
             return next(err);
         else
-            res.json();
+            res.json({
+                message: "Created plant",
+                plant: plant
+            });
     })
 }
 
