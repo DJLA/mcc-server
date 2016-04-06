@@ -5,7 +5,8 @@ var mockgoose = require('mockgoose');
 var PlantsModel = require("../models/plant.js");
 var plantController = require("../controllers/plants.js");
 var id = "";
-var url = ""
+var url = "http://10.11.91.37:3000";
+var token = ""
 
 mockgoose(mongoose);
 GLOBAL.status = "testing"

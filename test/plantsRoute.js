@@ -4,6 +4,8 @@ var mongoose = require('mongoose');
 var mockgoose = require('mockgoose');
 var PlantsModel = require("../models/plant.js");
 var id = "";
+var url = "http://10.11.91.37:3000";
+var token = ""
 
 mockgoose(mongoose);
 
@@ -27,6 +29,27 @@ describe("Plants Route",function(){
         
         done()
     })
+    
+    /*
+    before(function(done){
+        var data = {
+            username: 'HORTTEST@mccnet.mccneb.edu',
+            password: 'H0rtG3t1n!'
+        }
+        
+        request(url)
+            .post("/users/signin")
+            .send(data)
+            .end(function(err, res) {
+                if(err)
+                    throw err
+                
+                res.status.should.equal(200);
+                token = res.
+                done();
+            })
+    })
+    */
     
     it("should return all of the plants",function(done){
         request(url)
