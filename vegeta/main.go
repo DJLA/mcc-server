@@ -39,8 +39,8 @@ func makeRequests(url , method string) string{
         URL:url,
         Body:{
             username:"helo",
-            password:"ds"
-        }
+            password:"ds",
+        },
     })
     
     attacker := vegeta.NewAttacker()
