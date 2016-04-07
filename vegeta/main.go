@@ -38,7 +38,7 @@ func makeRequests(url , method string) string{
         Method:method,
         URL:url,
         Body:{
-            username:"helo"
+            username:"helo",
             password:"ds"
         }
     })
