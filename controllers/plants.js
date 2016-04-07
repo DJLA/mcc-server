@@ -15,6 +15,7 @@ exports.addPlant = function(req, res, next) {
 
 //Get all plants
 exports.getPlants = function(req, res, next) {
+    console.log(req.body)
     plantModel.find(function(err, plants) {
         if (err)
             return next(err)
