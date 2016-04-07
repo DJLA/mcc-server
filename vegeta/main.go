@@ -11,7 +11,7 @@ import(
 
 func main(){
 
-    metrics := makeRequests("http://plant-api-abdi07.c9users.io/plants","GET")
+    metrics := makeRequests("http://10.11.91.37:3000/plants","GET")
 
     file,err := os.Create("./tmp/metrics.json")
 
