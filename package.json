@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app",
-    "test": "mocha",
-    "setup-server": "npm install | npm install nodemon -g"
+    "test": "mocha"
   },
   "dependencies": {
     "activedirectory": "^0.7.2",
