@@ -37,10 +37,7 @@ func makeRequests(url , method string) string{
     targeter := vegeta.NewStaticTargeter(vegeta.Target{
         Method:method,
         URL:url,
-        Body:{
-            username:"helo",
-            password:"ds",
-        },
+        Body:[]byte("{username:'df'"),
     })
     
     attacker := vegeta.NewAttacker()
