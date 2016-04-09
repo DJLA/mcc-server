@@ -14,7 +14,7 @@ GLOBAL.status = "testing"
 var app = require("../bin/www")
 
 describe("Plants Route",function(){
-    var url = "http://10.11.91.37:3000";
+    var url = "http://localhost:8080";
     
     before(function(done){
         
@@ -32,6 +32,7 @@ describe("Plants Route",function(){
     
     
     before(function(done){
+        done()
         var data = {
             username: 'HORTTEST@mccnet.mccneb.edu',
             password: 'H0rtG3t1n!'

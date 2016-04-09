@@ -15,6 +15,8 @@ var chalk = require("chalk")
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+console.log(port)
+
 /**
  * Create HTTP server.
  */

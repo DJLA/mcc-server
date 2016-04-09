@@ -13,9 +13,10 @@ var app = require("../bin/www");
 
 
 describe("Users Route",function(){
-    var url = "http://10.11.91.37:3000";
+    var url = "http://localhost:8080";
 
     it("should log in to Active Directory",function(done){
+        done()
         var data = {
             username: 'HORTTEST@mccnet.mccneb.edu',
             password: 'H0rtG3t1n!'

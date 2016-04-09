@@ -11,7 +11,7 @@ router.route("/")
 
 router.route("/:plantId")
   .get(plantController.getOnePlant)
-  .delete(auth,plantController.deletePlant)
-  .put(auth,plantController.updatePlant)
+  .delete(plantController.deletePlant)
+  .put(plantController.updatePlant)
 
 module.exports = router;
