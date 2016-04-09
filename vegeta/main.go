@@ -11,7 +11,7 @@ import(
 
 func main(){
 
-    metrics := makeRequests("http://10.11.91.37:3000/plants","GET")
+    metrics := makeRequests("http://plant-api-abdi07.c9users.io/plants","GET")
 
     file,err := os.Create("./tmp/metrics.json")
 
@@ -37,7 +37,7 @@ func makeRequests(url , method string) string{
     targeter := vegeta.NewStaticTargeter(vegeta.Target{
         Method:method,
         URL:url,
-        Body:[]byte("{username:'df'"),
+        Body:[]byte("Body"),
     })
     
     attacker := vegeta.NewAttacker()

@@ -2,6 +2,7 @@ var plantModel = require("../models/plant.js");
 
 //Add plant
 exports.addPlant = function(req, res, next) {
+    console.log(req.body)
     plantModel.create(req.body, function(err, plant) {
         if (err)
             return next(err);
