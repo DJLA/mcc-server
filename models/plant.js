@@ -3,11 +3,11 @@ var Schema = mongoose.Schema;
 
 
 var PlantSchema = new Schema({
-    commonName:  { type: String, default: '' },
-    genus : { type: String, default: '' },
-    species: { type: String, default: '' },
+    commonName:  { type: String, default: '' } // required,
+    genus : { type: String, default: '' } // required,
+    species: { type: String, default: '' } // required,
     variety :{ type: String, default: '' },
-    family : { type: String, default: '' },
+    family : { type: String, default: '' } //required,
     plantPropagation : { type: String, default: '' },
     zoneHardiness : { type: Number, default: 0},
     exposure: { type: String, default: '' },
@@ -16,7 +16,7 @@ var PlantSchema = new Schema({
     insects : { type: String, default: '' },
     diseases : { type: String, default: '' },
     classification : { type: String, default: '' },
-    campus : { type: String, default: '' },
+    campus : { type: String, default: '' } //required,
     height : { type: Number, default: 0 },
     spread : { type: Number, default: 0 },
     flowers : { type: String, default: '' },
