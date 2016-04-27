@@ -117,7 +117,7 @@ var config = {
                     format: 'plain',
                     random: Math.random
                 }),
-                height:random(100,0),
+                heights:[random(100,0)],
                 spread:random(100,0),
                 flowers: loremIpsum({
                     count: random(3,1),
