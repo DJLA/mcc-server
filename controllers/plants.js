@@ -5,11 +5,14 @@ exports.addPlant = function(req, res, next) {
     plantModel.create(req.body, function(err, plant) {
         if (err)
             return next(err);
-        else
+        else{
+            plant.heights.push(req.body.height);
+            plant.save();
             res.json({
                 message: "Created plant",
                 plant: plant
             });
+        }
     })
 }
 
