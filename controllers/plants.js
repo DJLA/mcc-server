@@ -53,6 +53,18 @@ exports.deletePlant = function(req, res, next) {
 
 //Update a specific plant
 exports.updatePlant = function(req, res, next) {
+    plantModel.findById(req.params.plantId, function(err, plant) {
+        if (err)
+            return next(err)
+        else{
+            plant.heights.push(req.body.height);
+            plant.save();
+            res.json({
+                plant:plant
+            });            
+        }
+    })    
+    
     plantModel.findByIdAndUpdate(req.params.plantId, req.body, function(err, plant) {
         if (err)
             return next(err)
